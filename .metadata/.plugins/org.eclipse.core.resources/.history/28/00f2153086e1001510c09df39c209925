@@ -1,0 +1,27 @@
+import java.util.Scanner;
+ 
+public class ChooseAdventure {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Is it breakfast [b], lunch [l], dinner [d]? ");
+		String mealTime = scan.next();
+		
+		if(mealTime == "breakfast" || mealTime =="b"){
+			
+		}
+		else if (mealTime == "lunch"|| mealTime =="l"){
+			
+		}
+		else if (mealTime == "dinner"|| mealTime == "d"){
+			
+		}
+		else{
+			System.out.println("No time to eat!");
+		}		
+
+	}
+
+}

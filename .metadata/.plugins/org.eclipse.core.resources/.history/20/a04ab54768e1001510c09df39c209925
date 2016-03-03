@@ -1,0 +1,14 @@
+
+public class wageCalc {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int hoursPerWeek = 37;
+		float wage = 22.50f;
+		float pay = hoursPerWeek * wage;
+		
+		System.out.println("This weeks pay will be $"+pay+"0");
+
+	}
+
+}

@@ -1,0 +1,46 @@
+import java.util.Scanner;
+import java.text.NumberFormat;
+import java.util.Locale;
+
+public class wageCalc {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		double hours;
+		double wage;
+		double pay;
+		
+	/*	Scanner scanners = new Scanner(System.in);
+		System.out.println("Enter you wage");
+		double wage = Double.parseDouble(scanners.next());
+		System.out.println("Enter your hours");
+		double hours = Double.parseDouble(scanner.next());
+		
+		double netPay = wages*hours;
+		
+		NumberFormat formatter = .....
+		*/
+		
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.print("Enter your wage: ");
+		wage = Double.parseDouble(scan.next());
+		
+		System.out.println("Hours per week: ");
+		hours = Double.parseDouble(scan.next());
+		
+		if(hours >40){
+			double overTime = (hours - 40)*wage*1.5;
+			pay =(40*wage)+overTime;
+		}
+		else{
+		pay = hours * wage;
+		}
+		NumberFormat formatter = NumberFormat.getCurrencyInstance(Locale.US);
+		
+		String payFormatted = formatter.format(pay);
+		
+		System.out.println("This weeks pay will be $"+payFormatted);
+	}
+
+}

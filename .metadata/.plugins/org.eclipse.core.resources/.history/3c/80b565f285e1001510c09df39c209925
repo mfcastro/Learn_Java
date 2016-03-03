@@ -1,0 +1,17 @@
+import java.util.Scanner;
+ 
+public class ChooseAdventure {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.print("Is it breakfast [b], lunch [l], dinner [d]? ");
+		String mealTime = scan.next();
+		
+		System.out.println(mealTime);
+		
+
+	}
+
+}

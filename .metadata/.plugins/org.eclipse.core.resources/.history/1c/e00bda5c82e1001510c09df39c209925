@@ -1,0 +1,40 @@
+import java.util.Scanner;
+import java.text.NumberFormat;
+import java.util.Locale;
+
+public class wageCalc {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int hoursPerWeek = 37;
+		float wage = 22.50f;
+		float pay;
+		
+	/*	Scanner scanners = new Scanner(System.in);
+		System.out.println("Enter you wage");
+		double wage = Double.parseDouble(scanners.next());
+		System.out.println("Enter your hours");
+		double hours = Double.parseDouble(scanner.next());
+		
+		double netPay = wages*hours;
+		
+		NumberFormat formatter = .....
+		*/
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Hours per week: ");
+		
+		
+		hoursPerWeek = scan.nextInt();
+
+		System.out.println("wage per hour: ");
+		
+		wage = scan.nextInt();
+		
+		pay = hoursPerWeek * wage;
+		
+		System.out.println("This weeks pay will be $"+pay);
+
+	}
+
+}
