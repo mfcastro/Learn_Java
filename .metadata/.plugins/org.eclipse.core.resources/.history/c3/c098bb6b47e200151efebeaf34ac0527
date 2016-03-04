@@ -1,0 +1,15 @@
+
+public class Player {
+	String PlayerName;
+	int PlayerHealth = 100;
+	int IQ = 100;
+	
+	public Player(String playerName, int iq){
+		PlayerName = playerName;
+		IQ = iq;
+	}
+	public void Read(){
+		 IQ +=10;
+	}
+	
+}

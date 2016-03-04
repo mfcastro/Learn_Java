@@ -1,0 +1,13 @@
+
+public class Library {
+	String BookTitle;
+	String Author;
+	String Genre;
+	
+	public Library(String bookTitle, String author, String genre){
+		BookTitle = bookTitle;
+		Author = author;
+		Genre = genre;
+	}
+}
+

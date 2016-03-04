@@ -1,0 +1,53 @@
+import java.util.Scanner;
+
+public class breakfast {
+
+	
+/////BREAKFAST/////////////		
+public static void breakfast(){
+	Scanner scan = new Scanner(System.in);
+	boolean wantBreakfast = true;
+	
+	System.out.println("What would you like to eat for breakfast?" );
+	System.out.print("MENU -> Eggs[e], Yogurt[y], or Toast[t]: ");
+	
+	String meal = scan.next();
+	System.out.println();
+
+	breakfastMenu(meal);
+	
+	System.out.println("-----------------------------");
+	System.out.println();
+	System.out.print("Do you want more breakfast? [y/n] ");
+	System.out.println();
+	
+	meal = scan.next();
+	
+	if( meal.equals("y")){
+		breakfast();
+	}
+	else if (meal.equals("n")){
+		wantBreakfast = false;
+		
+	}
+}
+
+public static void breakfastMenu(String meal){
+	switch(meal){
+	case "e":
+	case "egg":	
+		System.out.println("One order of eggs coming right up!");
+		break;
+	case "y":
+	case "yogurt":	
+		System.out.println("Yogurt coming real fast!");
+		break;
+	case "t":
+	case "toast":	
+		System.out.println("A toast to you sir!");
+		break;	
+	default:
+		System.out.println("We do not have that!");
+}
+}
+}

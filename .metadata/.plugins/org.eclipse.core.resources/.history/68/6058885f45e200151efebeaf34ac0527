@@ -1,0 +1,10 @@
+
+public class Player {
+	String PlayerName;
+	int PlayerHealth = 100;
+	
+	public Player(String playerName){
+		PlayerName = playerName;
+	}
+	
+}
