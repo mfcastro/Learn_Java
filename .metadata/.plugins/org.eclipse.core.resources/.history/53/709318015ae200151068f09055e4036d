@@ -33,7 +33,13 @@ public class wageCalc {
 		System.out.println("This weeks pay will be "+payFormatted);
 	}
 	
-
+	public static void askForWage(){
+		
+	}
+	
+	public static void askForHours(){
+		
+	}
 	public static double OverTimePay(double wage, double hours){
 		double overTime = (hours - 40)*wage*1.5;
 		return overTime;

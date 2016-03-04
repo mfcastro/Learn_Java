@@ -55,6 +55,7 @@ public class TimeToEat {
 		}
 		else if (meal.equals("n")){
 			wantBreakfast = false;
+
 		}
 	} 	
 
@@ -179,6 +180,7 @@ public class TimeToEat {
 		meal = scan.next();
 
 		if(meal.equals("n") || meal.equals("no")){
+			//main.AreYouHungry();
 			main.Goodbye();
 			System.exit(0);
 

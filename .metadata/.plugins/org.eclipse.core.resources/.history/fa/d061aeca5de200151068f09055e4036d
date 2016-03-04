@@ -32,13 +32,6 @@ public class main {
 
 			TimeToEat.FoodTime(hungry);
 		}
-		else if(hunger.equals("n") || hunger.equals("no")){
-			Goodbye();
-		}
-		else{
-			System.out.println("Invalid Answer");
-			AreYouHungry();
-		}
 	}
 
 
@@ -50,8 +43,7 @@ public class main {
 		String read = scan.next();
 
 		if (read.equals("y")){
-			myBooks.AvailableBooks();
-			//myBooks.SelectBook();
+			myBooks.SelectBook();
 		}
 	}
 

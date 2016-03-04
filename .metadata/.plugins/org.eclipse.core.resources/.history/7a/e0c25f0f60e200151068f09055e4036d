@@ -50,8 +50,7 @@ public class main {
 		String read = scan.next();
 
 		if (read.equals("y")){
-			myBooks.AvailableBooks();
-			//myBooks.SelectBook();
+			myBooks.SelectBook();
 		}
 	}
 

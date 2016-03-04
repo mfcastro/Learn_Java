@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class TimeToEat {
 
-	
 	public static void FoodTime(boolean hungry){
 		while(hungry){
 			Scanner scan = new Scanner(System.in);
@@ -10,24 +9,24 @@ public class TimeToEat {
 			System.out.println("Would you like to have breakfast [b], lunch [l], dinner [d]? ");
 			String mealTime = scan.next();
 			System.out.println();
-
-			if(mealTime.equals("breakfast") || mealTime.equals("b")){
+			
+		if(mealTime.equals("breakfast") || mealTime.equals("b")){
 				Breakfast();
-			}
-			else if (mealTime.equals("lunch") || mealTime.equals("l")){
-				Lunch();
-			}
-			else if (mealTime.equals("dinner") || mealTime.equals("d")){
-				Dinner();
-			}
-			else{
-				System.out.println("No time to eat!");
-			}
-
-			System.out.println("_____________________________________");		
-			stillHungry();
 		}
-
+		else if (mealTime.equals("lunch") || mealTime.equals("l")){
+				Lunch();
+		}
+		else if (mealTime.equals("dinner") || mealTime.equals("d")){
+				Dinner();
+		}
+		else{
+			System.out.println("No time to eat!");
+		}
+		
+		System.out.println("_____________________________________");		
+		stillHungry();
+		}
+		
 	}
 
 	/////BREAKFAST/////////////		
@@ -55,6 +54,7 @@ public class TimeToEat {
 		}
 		else if (meal.equals("n")){
 			wantBreakfast = false;
+
 		}
 	} 	
 
@@ -169,24 +169,25 @@ public class TimeToEat {
 		}
 	}
 
-	///////STIL HUNGRY//////////
-	public static void stillHungry(){
-		Scanner scan = new Scanner(System.in);
-		String meal;
-		System.out.println();
-		boolean hungry = true;
-		System.out.println("Are you still hungry y/n? ");
-		meal = scan.next();
+///////STIL HUNGRY//////////
+public static void stillHungry(){
+	Scanner scan = new Scanner(System.in);
+	String meal;
+	System.out.println();
+	boolean hungry = true;
+	System.out.println("Are you still hungry y/n? ");
+	meal = scan.next();
 
-		if(meal.equals("n") || meal.equals("no")){
-			main.Goodbye();
-			System.exit(0);
-
-		}
-		else if(meal.equals("y") || meal.equals("yes")){
-			System.out.println("___________________________");
-			System.out.println();
-		}
+	if(meal.equals("n") || meal.equals("no")){
+		main.AreYouHungry();
+		main.Goodbye();
+		System.exit(0);
 
 	}
+	else if(meal.equals("y") || meal.equals("yes")){
+		System.out.println("___________________________");
+		System.out.println();
+	}
+
+}
 }

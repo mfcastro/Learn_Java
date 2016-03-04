@@ -55,6 +55,7 @@ public class TimeToEat {
 		}
 		else if (meal.equals("n")){
 			wantBreakfast = false;
+
 		}
 	} 	
 
