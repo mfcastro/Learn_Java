@@ -114,18 +114,18 @@ public class TimeToEat {
 		switch(meal){
 		case "e":
 		case "egg":	
-			System.out.println("One order of eggs coming right up! [+15]");
+			System.out.println("One order of eggs coming right up!");
 			((Player) player).Eat(15);
 
 			break;
 		case "y":
 		case "yogurt":	
-			System.out.println("Yogurt coming real fast! [+10]");
+			System.out.println("Yogurt coming real fast!");
 			((Player) player).Eat(10);
 			break;
 		case "t":
 		case "toast":	
-			System.out.println("A toast to you sir! [+5]");
+			System.out.println("A toast to you sir!");
 			((Player) player).Eat(5);
 			break;	
 		default:
@@ -139,17 +139,17 @@ public class TimeToEat {
 		switch(meal){
 		case "s":
 		case "soup":	
-			System.out.println("One order of the soup of the day! [+15]");
+			System.out.println("One order of the soup of the day!");
 			((Player) player).Eat(15);
 			break;
 		case "w":
 		case "sandwich":	
-			System.out.println("One sandwich coming up! [+15]");
+			System.out.println("One sandwich coming up!");
 			((Player) player).Eat(15);
 			break;
 		case "t":
 		case "taco":	
-			System.out.println("Un Taco! [+12]");
+			System.out.println("Un Taco!");
 			((Player) player).Eat(12);
 			break;	
 		default:
@@ -162,17 +162,17 @@ public class TimeToEat {
 		switch(meal){
 		case "p":
 		case "pizza":	
-			System.out.println("Pizza coming! [+20]");
+			System.out.println("Pizza coming!");
 			((Player) player).Eat(20);
 			break;
 		case "b":
 		case "burger":	
-			System.out.println("One burger with fries! [+17]");
+			System.out.println("One burger with fries!");
 			((Player) player).Eat(17);
 			break;
 		case "s":
 		case "pasta":	
-			System.out.println("Pasta to go! [+16]");
+			System.out.println("Pasta to go!");
 			((Player) player).Eat(16);
 			break;	
 		default:
