@@ -62,7 +62,8 @@ public class main {
 
 	public static void Goodbye(Object player){
 		System.out.println("_______Have a good day!_______");
-		System.out.println("Health: " + ((Player)player).PlayerHealth + " IQ: "+ ((Player)player).IQ);
+		System.out.println("Health: " + ((Player)player).PlayerHealth);
+		System.out.println("IQ: "+ ((Player)player).IQ);
 		System.exit(0);
 	}
 }

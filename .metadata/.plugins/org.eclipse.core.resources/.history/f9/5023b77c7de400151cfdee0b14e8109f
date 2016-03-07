@@ -6,8 +6,7 @@ public class main {
 		Object player = CreatePlayer();
 		DoYouWantToRead(player);
 		AreYouHungry(player);
-		Goodbye(player);
-		
+		Goodbye();
 
 
 	}
@@ -37,7 +36,7 @@ public class main {
 			TimeToEat.FoodTime(hungry, player);
 		}
 		else if(hunger.equals("n") || hunger.equals("no")){
-			Goodbye(player);
+			Goodbye();
 		}
 		else{
 			System.out.println("Invalid Answer");
@@ -60,9 +59,8 @@ public class main {
 	}
 
 
-	public static void Goodbye(Object player){
+	public static void Goodbye(){
 		System.out.println("_______Have a good day!_______");
-		System.out.println("Health: " + ((Player)player).PlayerHealth + " IQ: "+ ((Player)player).IQ);
 		System.exit(0);
 	}
 }

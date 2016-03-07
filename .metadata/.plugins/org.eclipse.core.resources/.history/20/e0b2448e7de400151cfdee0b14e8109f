@@ -25,7 +25,7 @@ public class TimeToEat {
 			}
 
 			System.out.println("_____________________________________");		
-			stillHungry(player);
+			stillHungry();
 		}
 
 	}
@@ -181,7 +181,7 @@ public class TimeToEat {
 	}
 
 	///////STIL HUNGRY//////////
-	public static void stillHungry(Object player){
+	public static void stillHungry(){
 		Scanner scan = new Scanner(System.in);
 		String meal;
 		System.out.println();
@@ -190,7 +190,7 @@ public class TimeToEat {
 		meal = scan.next();
 
 		if(meal.equals("n") || meal.equals("no")){
-			main.Goodbye(player);
+			main.Goodbye();
 			System.exit(0);
 
 		}
