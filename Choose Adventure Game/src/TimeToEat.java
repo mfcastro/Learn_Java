@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class TimeToEat {
 
 	
-	public static void FoodTime(boolean hungry){
+	public static void FoodTime(boolean hungry, Object player){
 		while(hungry){
 			Scanner scan = new Scanner(System.in);
 			String meal;
@@ -12,13 +12,13 @@ public class TimeToEat {
 			System.out.println();
 
 			if(mealTime.equals("breakfast") || mealTime.equals("b")){
-				Breakfast();
+				Breakfast(player);
 			}
 			else if (mealTime.equals("lunch") || mealTime.equals("l")){
-				Lunch();
+				Lunch(player);
 			}
 			else if (mealTime.equals("dinner") || mealTime.equals("d")){
-				Dinner();
+				Dinner(player);
 			}
 			else{
 				System.out.println("No time to eat!");
@@ -31,7 +31,7 @@ public class TimeToEat {
 	}
 
 	/////BREAKFAST/////////////		
-	public static void Breakfast(){
+	public static void Breakfast(Object player){
 		Scanner scan = new Scanner(System.in);
 		boolean wantBreakfast = true;
 
@@ -41,7 +41,7 @@ public class TimeToEat {
 		String meal = scan.next();
 		System.out.println();
 
-		BreakfastMenu(meal);
+		BreakfastMenu(meal, player);
 
 		System.out.println("-----------------------------");
 		System.out.println();
@@ -51,7 +51,7 @@ public class TimeToEat {
 		meal = scan.next();
 
 		if( meal.equals("y")){
-			Breakfast();
+			Breakfast(player);
 		}
 		else if (meal.equals("n")){
 			wantBreakfast = false;
@@ -59,7 +59,7 @@ public class TimeToEat {
 	} 	
 
 	/////LUNCH/////////////		
-	public static void Lunch(){
+	public static void Lunch(Object player){
 		Scanner scan = new Scanner(System.in);
 		String meal;
 
@@ -69,7 +69,7 @@ public class TimeToEat {
 		meal = scan.next();
 		System.out.println();
 
-		LunchMenu(meal);
+		LunchMenu(meal, player);
 
 		System.out.println("-----------------------------");
 		System.out.println();
@@ -79,12 +79,12 @@ public class TimeToEat {
 		meal = scan.next();
 
 		if( meal.equals("y")){
-			Lunch();
+			Lunch(player);
 		}
 	}
 
 	/////DINNER/////////////		
-	public static void Dinner(){
+	public static void Dinner(Object player){
 		Scanner scan = new Scanner(System.in);
 		String meal;
 
@@ -93,7 +93,7 @@ public class TimeToEat {
 		meal = scan.next();
 		System.out.println();
 
-		DinnerMenu(meal);
+		DinnerMenu(meal, player);
 
 		System.out.println("-----------------------------");
 		System.out.println();
@@ -103,46 +103,54 @@ public class TimeToEat {
 		meal = scan.next();
 
 		if( meal.equals("y")){
-			Dinner();
+			Dinner(player);
 		}
 
 
 	}
 
 	/////BREAKFAST MENU/////////////		
-	public static void BreakfastMenu(String meal){
+	public static void BreakfastMenu(String meal, Object player){
 		switch(meal){
 		case "e":
 		case "egg":	
 			System.out.println("One order of eggs coming right up!");
+			((Player) player).Eat(15);
+
 			break;
 		case "y":
 		case "yogurt":	
 			System.out.println("Yogurt coming real fast!");
+			((Player) player).Eat(10);
 			break;
 		case "t":
 		case "toast":	
 			System.out.println("A toast to you sir!");
+			((Player) player).Eat(5);
 			break;	
 		default:
 			System.out.println("We do not have that!");
+			
 		}
 	}
 
 	/////LUNCH MENU/////////////		
-	public static void LunchMenu(String meal){
+	public static void LunchMenu(String meal, Object player){
 		switch(meal){
 		case "s":
 		case "soup":	
 			System.out.println("One order of the soup of the day!");
+			((Player) player).Eat(15);
 			break;
 		case "w":
 		case "sandwich":	
 			System.out.println("One sandwich coming up!");
+			((Player) player).Eat(15);
 			break;
 		case "t":
 		case "taco":	
 			System.out.println("Un Taco!");
+			((Player) player).Eat(12);
 			break;	
 		default:
 			System.out.println("We do not have that!");
@@ -150,19 +158,22 @@ public class TimeToEat {
 	}
 
 	/////DINNER MENU/////////////		
-	public static void DinnerMenu(String meal){
+	public static void DinnerMenu(String meal, Object player){
 		switch(meal){
 		case "p":
 		case "pizza":	
 			System.out.println("Pizza coming!");
+			((Player) player).Eat(20);
 			break;
 		case "b":
 		case "burger":	
 			System.out.println("One burger with fries!");
+			((Player) player).Eat(17);
 			break;
 		case "s":
 		case "pasta":	
 			System.out.println("Pasta to go!");
+			((Player) player).Eat(16);
 			break;	
 		default:
 			System.out.println("We do not have that!");

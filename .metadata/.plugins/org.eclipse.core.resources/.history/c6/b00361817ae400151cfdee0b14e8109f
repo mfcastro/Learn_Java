@@ -1,0 +1,17 @@
+
+public class Player {
+	String PlayerName;
+	int PlayerHealth = 100;
+	int IQ = 100;
+
+	public Player(String playerName){
+		PlayerName = playerName;
+	}
+
+	
+	public int Read(int number) {
+		// TODO Auto-generated method stub
+		return IQ += number;
+	}
+
+}

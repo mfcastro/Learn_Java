@@ -8,8 +8,14 @@ public class Player {
 		PlayerName = playerName;
 	}
 
-	public void Read(){
-		IQ +=10;
+	
+	public int Read(int number) {
+		// TODO Auto-generated method stub
+		return IQ += number;
+	}
+	
+	public int Eat(int number){
+		return PlayerHealth = number;
 	}
 
 }

@@ -3,15 +3,15 @@ import java.util.Scanner;
 public class main {
 
 	public static void main(String[] args) {
-		CreatePlayer();
-		DoYouWantToRead();
-		AreYouHungry();
+		Object player = CreatePlayer();
+		DoYouWantToRead(player);
+		AreYouHungry(player);
 		Goodbye();
 
 
 	}
 	
-	public static void CreatePlayer(){
+	public static Object CreatePlayer(){
 		Scanner scan = new Scanner(System.in);
 		System.out.print("What is your name: " );
 		String playerName = scan.next();
@@ -19,10 +19,13 @@ public class main {
 		Player player = new Player(playerName); 
 
 		System.out.println("Hello " + player.PlayerName + "!");
+		System.out.println("Health: " + player.PlayerHealth);
+		System.out.println("IQ: "+ player.IQ);
+		return player;
 	}
 
 
-	public static void AreYouHungry(){
+	public static void AreYouHungry(Object player){
 		boolean hungry = true;
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Are you hungry? [y/n]");
@@ -30,19 +33,19 @@ public class main {
 
 		if(hunger.equals("y") || hunger.equals("yes")){
 
-			TimeToEat.FoodTime(hungry);
+			TimeToEat.FoodTime(hungry, player);
 		}
 		else if(hunger.equals("n") || hunger.equals("no")){
 			Goodbye();
 		}
 		else{
 			System.out.println("Invalid Answer");
-			AreYouHungry();
+			AreYouHungry(player);
 		}
 	}
 
 
-	public static void DoYouWantToRead(){
+	public static void DoYouWantToRead(Object player){
 		Scanner scan = new Scanner(System.in);
 		Library myBooks = new Library();
 
@@ -50,14 +53,15 @@ public class main {
 		String read = scan.next();
 
 		if (read.equals("y")){
-			myBooks.AvailableBooks();
-			//myBooks.SelectBook();
+			myBooks.AvailableBooks(player);
+			 //player.Read();
 		}
 	}
 
 
 	public static void Goodbye(){
 		System.out.println("_______Have a good day!_______");
+		System.exit(0);
 	}
 }
 

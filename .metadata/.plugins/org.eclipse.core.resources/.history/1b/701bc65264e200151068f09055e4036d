@@ -1,0 +1,64 @@
+import java.util.Scanner;
+
+public class main {
+
+	public static void main(String[] args) {
+		CreatePlayer();
+		DoYouWantToRead();
+		AreYouHungry();
+		Goodbye();
+
+
+	}
+	
+	public static void CreatePlayer(){
+		Scanner scan = new Scanner(System.in);
+		System.out.print("What is your name: " );
+		String playerName = scan.next();
+		
+		Player player = new Player(playerName); 
+
+		System.out.println("Hello " + player.PlayerName + "!");
+	}
+
+
+	public static void AreYouHungry(){
+		boolean hungry = true;
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Are you hungry? [y/n]");
+		String hunger = scan.next();
+
+		if(hunger.equals("y") || hunger.equals("yes")){
+
+			TimeToEat.FoodTime(hungry);
+		}
+		else if(hunger.equals("n") || hunger.equals("no")){
+			System.exit(0);
+		}
+		else{
+			System.out.println("Invalid Answer");
+			AreYouHungry();
+		}
+	}
+
+
+	public static void DoYouWantToRead(){
+		Scanner scan = new Scanner(System.in);
+		Library myBooks = new Library();
+
+		System.out.println("Do you want to read? [y/n] ");
+		String read = scan.next();
+
+		if (read.equals("y")){
+			myBooks.AvailableBooks();
+			//myBooks.SelectBook();
+		}
+	}
+
+
+	public static void Goodbye(){
+		System.out.println("_______Have a good day!_______");
+	}
+}
+
+
