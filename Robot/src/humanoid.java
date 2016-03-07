@@ -2,7 +2,6 @@
 public class humanoid extends Robot{
 	int feetNum = 2;
 	int armNum = 2;
-	
 	public humanoid(String name){
 		super(name);
 		

@@ -1,0 +1,11 @@
+import java.util.Scanner;
+import java.lang.Math;
+public class main {
+
+	public static void main(String[] args) {
+		double rand = Math.random();
+		System.out.println(rand);
+		Robot robot = new Robot("Rob");
+		robot.MainMenu(robot);
+	}
+}

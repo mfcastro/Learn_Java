@@ -14,29 +14,4 @@ public class CreateRobot{
 		String name = scan.next();
 		return name;
 	}
-	
-	
-	public void RobotSelector(){
-		String robotType = SelectRobotType();
-		String name = NameRobot();
-		
-		if(robotType.equals("r")){
-			Robot robot = new Robot(name);
-			//return robot;
-		}
-		else if(robotType.equals("h")){
-			humanoid humanoid = new humanoid(name);
-			//return humanoid;
-		}
-		else if(robotType.equals("m")){
-			MilitaryRobot milRob = new MilitaryRobot(name);
-			//return milRob;
-		}
-		else{
-			System.out.println("The type of robot does not exist");
-			SelectRobotType();
-		}
-		//return null;
-		
-	}
 }

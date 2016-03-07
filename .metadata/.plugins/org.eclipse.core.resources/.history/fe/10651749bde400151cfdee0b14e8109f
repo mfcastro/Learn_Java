@@ -1,0 +1,69 @@
+import java.util.Scanner;
+
+public class Robot extends ControlRobot{
+	String Name;
+	Boolean On = true;
+	int BatteryLevel = 100;
+	String robotType ="Generic";
+
+	public Robot (String name){
+		Name = name;
+	}
+
+	public void Speak(){
+		System.out.println("I am a robot");
+	}
+
+	public void DisplayPowerLevel (){
+		System.out.println("Current Battery life: " +BatteryLevel+"%");
+
+	}
+
+	public void Recharge(Robot robot){
+		if(BatteryLevel == 100){
+			System.out.println("Battery is at 100%");
+		}
+		else if (BatteryLevel < 100){
+			int needToCharge = 100 - BatteryLevel;
+			BatteryLevel += needToCharge;
+			System.out.println("Charging.....");
+			System.out.println("Battery is now at 100%");
+			ControlRobot menu = new ControlRobot();
+			menu.MainMenu(robot);
+		}
+	}
+
+	public void BatteryDead(Robot robot){
+		if(BatteryLevel == 0 || BatteryLevel < 0){
+			System.out.println("Battery is Dead");
+			TurnOff();
+			ControlRobot menu = new ControlRobot();
+			menu.RechargeMenu(robot);
+		}
+	}
+
+	public void TurnOff(){
+		On = false;
+		System.out.println("Power off");
+	}
+
+	public void TurnOn(){
+		On = true;
+		System.out.println("Power on");
+	}
+		
+	public String SelectRobotType(){
+		Scanner scan = new Scanner(System.in);
+		System.out.println("SELECT ROBOT -> Standard Robot [r] , Humanoid [h] , Military [m]");
+		String selection = scan.next();
+		return selection;
+	}
+	public String NameRobot(){
+		Scanner scan = new Scanner(System.in);
+		System.out.print("What name do you want to give your robot? ");
+		String name = scan.next();
+		return name;
+	}
+	
+}	
+
