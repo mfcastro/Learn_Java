@@ -10,11 +10,12 @@ public class Player {
 
 	
 	public int Read(int number) {
+		// TODO Auto-generated method stub
 		return IQ += number;
 	}
 	
 	public int Eat(int number){
-		return PlayerHealth += number;
+		return PlayerHealth = number;
 	}
 
 }

@@ -22,8 +22,6 @@ public class main {
 		System.out.println("Hello " + player.PlayerName + "!");
 		System.out.println("Health: " + player.PlayerHealth);
 		System.out.println("IQ: "+ player.IQ);
-		System.out.println("___________________________");
-		System.out.println();
 		return player;
 	}
 

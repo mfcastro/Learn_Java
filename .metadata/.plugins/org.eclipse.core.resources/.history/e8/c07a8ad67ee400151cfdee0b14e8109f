@@ -10,6 +10,7 @@ public class Player {
 
 	
 	public int Read(int number) {
+		// TODO Auto-generated method stub
 		return IQ += number;
 	}
 	
