@@ -1,0 +1,84 @@
+import java.util.Scanner;
+
+public class Robot extends ControlRobot {
+	String Name;
+	Boolean On = true;
+	int BatteryLevel = 100;
+
+	public Robot (String name, Boolean on){
+		Name = name;
+		On = on;
+	}
+
+	public void Speak(){
+		System.out.println("I am a robot");
+	}
+
+	public void DisplayPowerLevel (){
+		System.out.println("Current Battery life: " +BatteryLevel+"%");
+
+	}
+
+	public void Recharge(){
+		if(BatteryLevel == 100){
+			System.out.println("Battery is at 100%");
+		}
+		else if (BatteryLevel < 100){
+			int needToCharge = 100 - BatteryLevel;
+			BatteryLevel += needToCharge;
+			System.out.println("Charging.....");
+			System.out.println("Battery is now at 100%");
+		}
+	}
+
+	public void BatteryDead(){
+		if(BatteryLevel == 0){
+			System.out.println("Battery is Dead");
+			TurnOff();
+		}
+	}
+
+	public void TurnOff(){
+		On = false;
+		System.out.println("Power off");
+	}
+
+	public void TurnOn(){
+		On = true;
+		System.out.println("Power on");
+	}
+
+	
+/*
+	public  int MoveForward(){
+		return BatteryLevel -=10;
+	}
+
+	public  int MoveBackward(){
+		return BatteryLevel -=5;
+	}
+
+	public void Movement(Robot robot){
+		Boolean move = true;
+		while (move){
+			Scanner scan = new Scanner(System.in);
+			System.out.println("Move Forward [w]; Move BackWards [s]; Exit [x]");
+			String control = scan.next();
+			
+			if(BatteryLevel == 0){
+				BatteryDead();
+				move = false;
+			}
+			else if(control.equals("w")){
+				robot.MoveForward();
+			}
+			else if(control.equals("s")){
+				robot.MoveBackward();
+			}
+			else if(control.equals("x"))
+				move = false;	
+		}
+	
+	}*/
+}	
+

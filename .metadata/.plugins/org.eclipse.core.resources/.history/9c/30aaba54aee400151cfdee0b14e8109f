@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class CreateRobot{
+	
+	public String SelectRobotType(){
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Standard Robot [r] , Humanoid [h] , Military [m]");
+		String selection = scan.next();
+		return selection;
+	}
+	public String NameRobot(){
+		Scanner scan = new Scanner(System.in);
+		System.out.print("What name do you want to give your robot? ");
+		String name = scan.next();
+		return name;
+	}
+	
+	
+	public Robot RobotSelector(){
+		String robotType = SelectRobotType();
+		String name = NameRobot();
+		
+		if(robotType.equals("r")){
+			Robot robot = new Robot(name);
+			return robot;
+		}
+		else if(robotType.equals("h")){
+			humanoid humanoid = new humanoid(name);
+			return humanoid;
+		}
+		else if(robotType.equals("m")){
+			MilitaryRobot milRob = new MilitaryRobot(name);
+			return milRob;
+		}
+		else{
+			System.out.println("The type of robot does not exist");
+			SelectRobotType();
+		}
+		return null;
+		
+	}
+}

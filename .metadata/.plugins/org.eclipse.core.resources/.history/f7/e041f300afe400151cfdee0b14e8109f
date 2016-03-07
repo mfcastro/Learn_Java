@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class main {
+
+	public static void main(String[] args) {
+		
+		Robot robot = new Robot("Name");
+	
+		robot.MovementMenu(robot);
+		
+		//String Select = create.SelectRobotType();
+		
+		robot.DisplayPowerLevel();
+		
+		
+		
+	}
+
+	
+
+}

@@ -57,7 +57,6 @@ public class main {
 
 		if (read.equals("y")){
 			myBooks.AvailableBooks(player);
-			 //player.Read();
 		}
 	}
 

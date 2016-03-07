@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class ControlRobot {
+	public  int MoveForward(Robot robot){
+		return robot.BatteryLevel -=10;
+	}
+
+	public  int MoveBackward(Robot robot){
+		return robot.BatteryLevel -=5;
+	}	
+	
+	public void Movement(Robot robot){
+		Boolean move = true;
+		while (move){
+			Scanner scan = new Scanner(System.in);
+			System.out.println("Move Forward [w]; Move BackWards [s]; Exit [x]");
+			String control = scan.next();
+			
+			if(robot.BatteryLevel == 0){
+				robot.BatteryDead();
+				move = false;
+			}
+			else if(control.equals("w")){
+				MoveForward(robot);
+			}
+			else if(control.equals("s")){
+				MoveBackward(robot);
+			}
+			else if(control.equals("x"))
+				move = false;	
+		}
+	
+	}
+
+
+}

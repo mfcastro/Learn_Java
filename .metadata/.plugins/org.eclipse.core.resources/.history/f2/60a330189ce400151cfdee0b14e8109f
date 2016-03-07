@@ -1,0 +1,15 @@
+
+public class Robot {
+	String Name;
+	Boolean On = true;
+	int BatteryLevel = 100;
+	
+	public Robot (String name, Boolean on){
+		Name = name;
+		On = on;
+	}
+	
+	public void Speak(){
+		System.out.println("I am a robot");
+	}
+}

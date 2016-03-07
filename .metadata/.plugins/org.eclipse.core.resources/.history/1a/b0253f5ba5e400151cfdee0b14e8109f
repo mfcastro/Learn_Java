@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		Robot robot = new Robot("Robot", true);
+		humanoid humanRob = new humanoid("rob", true);
+		MilitaryRobot milRob = new MilitaryRobot("MilitaryRob", true, 75);
+		
+		
+		
+		
+		Movement(robot );
+		
+		
+		/*
+		
+		humanRob.DisplayPowerLevel();
+		humanRob.MoveBackward();
+		humanRob.MoveForward();
+		humanRob.MoveBackward();
+		humanRob.DisplayPowerLevel();
+		humanRob.Recharge();
+		*/
+	}
+	
+	public static void Movement(Robot robot){
+		Boolean move = true;
+		
+		while (move){
+			Scanner scan = new Scanner(System.in);
+			System.out.println("Move Forward [w]; Move BackWards [s]; Exit [x]");
+			String control = scan.next();
+		
+			if(control.equals("w")){
+				robot.MoveForward();
+			}
+			else if(control.equals("s")){
+				robot.MoveBackward();
+			}
+			
+		}
+		
+	}
+
+}

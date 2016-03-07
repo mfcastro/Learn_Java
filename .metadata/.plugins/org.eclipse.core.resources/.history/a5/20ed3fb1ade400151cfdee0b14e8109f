@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+
+		Robot robot = new Robot("Robot");
+		humanoid humanRob = new humanoid("rob");
+		MilitaryRobot milRob = new MilitaryRobot("MilitaryRob");
+		
+		CreateRobot create = new CreateRobot();
+		create.RobotSelector();
+		//String Select = create.SelectRobotType();
+		
+		
+		humanRob.MovementMenu(humanRob);
+		robot.DisplayPowerLevel();
+		
+		
+		
+	}
+
+	
+
+}

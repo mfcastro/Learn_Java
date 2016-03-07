@@ -1,0 +1,14 @@
+
+public class humanoid extends Robot{
+	int feetNum = 2;
+	int armNum = 2;
+	
+	public humanoid(String name, Boolean on){
+		super(name, on);
+		
+		}
+	
+	public void HumanoidSpeak(){
+		System.out.println("I am a humanoid");
+	}
+}

@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+
+		Robot robot = new Robot("Robot", true);
+		humanoid humanRob = new humanoid("rob", true);
+		MilitaryRobot milRob = new MilitaryRobot("MilitaryRob", true);
+		
+		
+		humanRob.MovementMenu(humanRob);
+		robot.DisplayPowerLevel();
+		
+		System.out.println(humanRob.armNum);
+		
+		
+	}
+
+	
+
+}

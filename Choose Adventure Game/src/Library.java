@@ -19,7 +19,7 @@ public class Library {
 		
 	}
 	
-	public static void SelectBook(String bookSelection, Object player){
+	public void SelectBook(String bookSelection, Object player){
 		switch(bookSelection){
 			case "The 4 Hour Work Week":
 			case "1":
@@ -50,5 +50,6 @@ public class Library {
 		}
 		System.out.println();
 	}
+	
 }
 

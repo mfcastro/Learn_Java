@@ -1,0 +1,42 @@
+
+public class Robot {
+	String Name;
+	Boolean On = true;
+	int BatteryLevel = 100;
+	
+	public Robot (String name, Boolean on){
+		Name = name;
+		On = on;
+	}
+
+	public void Speak(){
+		System.out.println("I am a robot");
+	}
+
+	public void DisplayPowerLevel (){
+		System.out.println("Current Battery life: " +BatteryLevel+"%");
+
+	}
+
+	public void Recharge(){
+		if(BatteryLevel == 100){
+			System.out.println("Battery is at 100%");
+		}
+		else if (BatteryLevel < 100){
+			int needToCharge = 100 - BatteryLevel;
+			BatteryLevel += needToCharge;
+			System.out.println("Battery is not at 100%");
+		}
+	}
+	
+	public void TurnOff(){
+		On = false;
+		System.out.println("Power off");
+	}
+	
+	public void TurnOn(){
+		On = true;
+		System.out.println("Power on");
+	}
+
+}

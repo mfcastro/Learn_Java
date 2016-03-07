@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class CreateRobot {
+	
+	public String SelectRobotType(){
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Standard Robot [r] , Humanoid [h] , Military [m]");
+		String selection = scan.next();
+		return selection;
+	}
+	/*
+	public Robot RobotSelector (String Name, Boolean on){
+		
+		Robot robot = new Robot(Name, on);
+		
+		humanoid humanoid = new humanoid(Name, on);
+		
+		MilitaryRobot milRob = new MilitaryRobot(Name, on);
+		
+	}*/
+}

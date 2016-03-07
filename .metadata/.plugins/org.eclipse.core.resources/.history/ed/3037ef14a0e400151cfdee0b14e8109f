@@ -1,0 +1,13 @@
+
+public class MilitaryRobot extends Robot {
+	int armor;
+	
+	public MilitaryRobot(String name, boolean on, int armor){
+		super(name, on);
+		armor = armor;
+	}
+	
+	public void MilitarySpeak(){
+		System.out.println("Yes Sir!");
+	}
+}

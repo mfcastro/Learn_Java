@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class ControlRobot {
+	
+	/*public void ControlMenu(){
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Move Forward [w]; Move BackWards [s]");
+		String control = scan.next();
+		
+		if(control.equals("w")){
+			Robot.MoveForward();
+		}
+		else if(control.equals("s")){
+			Robot.MoveBackward();
+		}
+	
+	}*/
+}
