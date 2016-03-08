@@ -4,7 +4,7 @@ import java.lang.Math;
 public class ControlRobot {
 
 	public void MainMenu(Robot robot){
-		System.out.println("MAIN -> Move [m], Turn on/off [o], Display Battery Life [b], Charge [c], Speak [s], Exit [x]");
+		System.out.println("MAIN -> Move [m], Turn on/off [o], Display Battery Life [b], Charge [c] Exit [x]");
 		Scanner scan = new Scanner(System.in);
 		String answer = scan.next();
 
@@ -27,10 +27,6 @@ public class ControlRobot {
 		}
 		else if(answer.equals("c")){
 			robot.Recharge(robot);
-			MainMenu(robot);
-		}
-		else if (answer.equals("s")){
-			robot.Speak();
 			MainMenu(robot);
 		}
 		else if(answer.equals("x")){
