@@ -14,13 +14,7 @@ public class Robot extends ControlRobot{
 	}
 
 	public void DisplayPowerLevel (){
-		if(BatteryLevel > 0){
-			System.out.println("Current Battery life: " +BatteryLevel+"%");
-		}
-		else{
-			System.out.println("Current Battery Life is 0%");
-		}
-		
+		System.out.println("Current Battery life: " +BatteryLevel+"%");
 
 	}
 

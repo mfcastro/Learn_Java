@@ -1,9 +1,0 @@
-import java.util.Scanner;
-
-public class ControlRobot {
-	Scanner scanner = new Scanner(System.in);
-	System.out.println("Move Forward [W] ; Move Backward [S]");
-	System.out.print();
-	
-	
-}
